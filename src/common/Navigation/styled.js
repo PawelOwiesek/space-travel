@@ -9,6 +9,7 @@ export const Container = styled.div`
   align-items: center;
   position: absolute;
   z-index: 1;
+  margin-top: 50px;
 
   @media (max-width: 1280px) {
     display: none;
@@ -47,16 +48,16 @@ export const LinkWrapper = styled.p`
   font-size: ${theme.fontSize.normal};
   letter-spacing: 0.168rem;
   font-weight: 700;
-  border-bottom: 2px solid transparent;
+  border-bottom: 4px solid transparent;
 
   &:hover {
-    border-bottom: 2px solid hsl(${theme.colors.light});
-    padding: 35px 0;
+    border-bottom: 4px solid hsl(${theme.colors.light} / 20%);
+    padding: 33px 0;
   }
 
   border-bottom: ${({ active }) =>
-    active ? `2px solid hsl(${theme.colors.white})` : !active};
-  padding: 35px 0;
+    active ? `4px solid hsl(${theme.colors.white})` : null};
+  padding: 33px 0;
 `;
 
 export const LinkTo = styled(Link)`
