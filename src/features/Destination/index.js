@@ -1,10 +1,10 @@
-import { Paragraph } from "./styled";
+import { Image } from "./styled";
 import Container from "./Container";
 
 const Destination = () => {
   return (
     <Container>
-      <Paragraph>Hello</Paragraph>
+      <Image src="https://i.postimg.cc/GtkcCtXh/image-mars.png" alt="mars" />
     </Container>
   );
 };
