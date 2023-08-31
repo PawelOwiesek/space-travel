@@ -31,10 +31,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body{
     line-height:1.5;
-    min-height:100vh;
-    max-width:80rem;
-    margin: auto;
-    background-color: grey;
+    margin-inline: auto;
     font-family:"Barlow",sans-serif;
   }
 `;
