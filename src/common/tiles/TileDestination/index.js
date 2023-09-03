@@ -25,7 +25,6 @@ const TileDestination = ({
         </button>
       </div>
       <p>{planet}</p>
-      {"    "}
       {description}
       <div>
         <p>AVG. DISTANCE</p>
@@ -35,7 +34,7 @@ const TileDestination = ({
         <p>Est. travel time</p>
         <p>{travel}</p>
       </div>
-      <Image style={{ height: "400" }} src={image} alt={alt} />
+      <Image src={image} alt={alt} />
     </>
   );
 };
