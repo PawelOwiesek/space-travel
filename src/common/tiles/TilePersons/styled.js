@@ -68,6 +68,6 @@ export const Button = styled.button`
 
 export const ImagePerson = styled.img`
   width: 800px;
-  height: 800px;
-  margin: 14.5rem 20rem 0 0;
+  height: 699px;
+  margin: 14.5rem 11rem 0 0;
 `;
