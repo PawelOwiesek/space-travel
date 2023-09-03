@@ -37,10 +37,11 @@ export const Button = styled.button`
   height: 20px;
   border-radius: 50%;
   opacity: ${({ active }) => (active ? 1 : 0.174363)};
+  cursor: pointer;
   transition: 0.4s;
 
   &:hover {
-    opacity: 1;
+    opacity: 0.454363;
     transform: scale(1);
   }
 `;
