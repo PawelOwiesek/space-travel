@@ -1,27 +1,27 @@
-import { ImagePerson } from "./styled";
+import {
+  Container,
+  Description,
+  Heading,
+  ImagePerson,
+  Name,
+  Number,
+  Role,
+  Title,
+} from "./styled";
 
 const TilePersons = ({ person, description, role, image, alt }) => {
   return (
     <>
-      <div>
-        <button>
-          <span>moon</span>
-        </button>
-        <button>
-          <span>mars</span>
-        </button>
-        <button>
-          <span>europa</span>
-        </button>
-        <button>
-          <span>titan</span>
-        </button>
-      </div>
-      <p>{person}</p>
-      {"    "}
-      <p> {description}</p>
-      {role}
-      <ImagePerson style={{ height: "400" }} src={image} alt={alt} />
+      <Container>
+        <Heading>
+          <Number>02</Number>
+          <Title>Meet your crew</Title>
+        </Heading>
+        <Role>{role}</Role>
+        <Name>{person}</Name>
+        <Description> {description}</Description>{" "}
+      </Container>{" "}
+      <ImagePerson src={image} alt={alt} />
     </>
   );
 };
