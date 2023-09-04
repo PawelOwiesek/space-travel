@@ -11,13 +11,27 @@ export const Container = styled.div`
   z-index: 1;
   margin-top: 50px;
 
-  @media (max-width: 1280px) {
-    display: none;
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+  }
+
+  @media (max-width: ${theme.breakpoints.large}) {
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 0;
+    z-index: 5;
+    overflow: hidden;
   }
 `;
 
 export const Logo = styled(logo)`
   margin: 0 53px;
+  @media (max-width: ${theme.breakpoints.large}) {
+    margin: 20px 0 0 20px;
+  }
+
+  @media (max-width: ${theme.breakpoints.small}) {
+    margin: 10px 0 0 10px;
+  }
 `;
 
 export const Divider = styled.div`
@@ -27,6 +41,9 @@ export const Divider = styled.div`
   background-color: hsl(${theme.colors.white});
   margin-right: -40px;
   z-index: 1;
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    display: none;
+  }
 `;
 
 export const NavBar = styled.div`
@@ -39,6 +56,31 @@ export const NavBar = styled.div`
   color: hsl(${theme.colors.white});
   background-color: hsl(${theme.colors.light} / 0.04);
   backdrop-filter: blur(40.774227142333984px);
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    width: 30rem;
+    position: fixed;
+    right: 0;
+  }
+
+  @media (max-width: ${theme.breakpoints.large}) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4rem 0 0 2rem;
+    width: 16rem;
+    height: 100vh;
+    gap: ${theme.gap.gapSmall};
+    transform: translateX(100%);
+    position: fixed;
+    right: -1rem;
+    top: 0;
+  }
+
+  @media (max-width: ${theme.breakpoints.medium}) {
+    gap: ${theme.gap.gapLarge};
+    padding: 8rem 0 0 2rem;
+  }
 `;
 
 export const LinkWrapper = styled.p`
@@ -58,6 +100,11 @@ export const LinkWrapper = styled.p`
   border-bottom: ${({ active }) =>
     active ? `4px solid hsl(${theme.colors.white})` : null};
   padding: 33px 0;
+
+  @media (max-width: ${theme.breakpoints.large}) {
+    border: none;
+    padding: 0;
+  }
 `;
 
 export const LinkTo = styled(Link)`
@@ -66,4 +113,12 @@ export const LinkTo = styled(Link)`
   text-transform: uppercase;
   font-weight: 400;
 `;
-export const Number = styled.span``;
+export const Number = styled.span`
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    display: none;
+  }
+
+  @media (max-width: ${theme.breakpoints.large}) {
+    display: flex;
+  }
+`;
