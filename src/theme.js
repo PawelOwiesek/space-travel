@@ -7,7 +7,7 @@ export const theme = {
   fontSize: {
     small: "0.875rem",
     normal: "1rem",
-    medium: "1.125rem",
+    medium: "1.25rem",
     large: "9.375rem",
     heading1: "6.25rem",
     heading2: "3.5rem",
@@ -29,5 +29,13 @@ export const theme = {
     gapLarge: "2rem",
     gapXL: "2.5rem",
     gapXXL: "3rem",
+  },
+
+  breakpoints: {
+    small: "320px",
+    medium: "450px",
+    large: "767px",
+    ipadSmall: "1023px",
+    ipadMedium: "1280px",
   },
 };
