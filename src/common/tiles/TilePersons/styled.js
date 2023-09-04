@@ -5,6 +5,11 @@ export const Container = styled.div`
   color: white;
   width: 100vw;
   margin-left: 10rem;
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    max-height: 600px;
+    margin: -1rem 0 0 10rem;
+  }
 `;
 
 export const Heading = styled.div`
@@ -12,6 +17,10 @@ export const Heading = styled.div`
   width: 100%;
   gap: ${theme.gap.gapMedium};
   margin: 17rem 0 9rem;
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    margin: 20rem 0 2rem -10rem;
+  }
 `;
 
 export const Number = styled.p`
@@ -32,11 +41,19 @@ export const Role = styled.h3`
   font-family: ${theme.fonts.familyBellefair};
   text-transform: uppercase;
   opacity: 0.5042;
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    font-size: 22px;
+  }
 `;
 
 export const Name = styled(Role)`
   font-size: ${theme.fontSize.heading2};
   opacity: 1;
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    font-size: 34px;
+  }
 `;
 
 export const Description = styled.p`
@@ -44,6 +61,10 @@ export const Description = styled.p`
   line-height: 2rem;
   color: hsl(${theme.colors.light});
   width: 27.75rem;
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    font-size: 16px;
+  }
 `;
 
 export const Buttons = styled.div`
@@ -70,4 +91,10 @@ export const ImagePerson = styled.img`
   width: 800px;
   height: 699px;
   margin: 14.5rem 11rem 0 0;
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    width: 20rem;
+    height: 24rem;
+    margin: 3rem 0 0 15rem;
+  }
 `;

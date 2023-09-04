@@ -5,6 +5,11 @@ export const List = styled.ul`
   list-style-type: none;
   display: flex;
   overflow: hidden;
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    flex-direction: column;
+    overflow-y: auto;
+  }
 `;
 
 export const Item = styled.li`
@@ -20,6 +25,21 @@ export const Item = styled.li`
       ? "-200vw"
       : "-300vw"};
   transition: 2s linear;
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    height: 100vh;
+    flex-direction: column;
+    left: 0;
+    top: ${({ number }) =>
+      number === 0
+        ? "-15vh"
+        : number === 1
+        ? "-115vh"
+        : number === 2
+        ? "-215vh"
+        : "-315vh"};
+    transition: 2s linear;
+  }
 `;
 export const Buttons = styled.div`
   display: flex;
@@ -29,6 +49,11 @@ export const Buttons = styled.div`
   left: 13rem;
   top: 43rem;
   z-index: 4;
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    top: 30rem;
+    left: 20rem;
+  }
 `;
 
 export const Button = styled.button`

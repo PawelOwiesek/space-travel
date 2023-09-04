@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../../theme";
 
 export const StyledWrapper = styled.div`
   display: flex;
@@ -11,8 +12,10 @@ export const StyledWrapper = styled.div`
   max-width: 100vw;
   height: 100vh;
 
-  @media (max-width: 1024px) {
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
     background-image: url("https://i.postimg.cc/BZmh47BG/background-crew-tablet.jpg");
+    justify-content: center;
+    align-items: flex-start;
   }
 
   @media (max-width: 450px) {
