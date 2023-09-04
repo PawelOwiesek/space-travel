@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior:smooth;
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
 
   *, ::after, ::before {
