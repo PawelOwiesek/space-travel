@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../../theme";
 
 export const StyledWrapper = styled.div`
   display: flex;
@@ -11,11 +12,20 @@ export const StyledWrapper = styled.div`
   max-width: 100vw;
   height: 100vh;
 
-  @media (max-width: 1024px) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     background-image: url("https://i.postimg.cc/Znbb29s8/background-home-tablet.jpg");
+    flex-direction: column;
+    justify-content: center;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: ${theme.breakpoints.large}) {
     background-image: url("https://i.postimg.cc/XqCR2n4f/background-home-mobile.jpg");
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @media (max-width: ${theme.breakpoints.medium}) {
+    flex-direction: column;
+    justify-content: center;
   }
 `;
