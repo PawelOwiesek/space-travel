@@ -63,7 +63,7 @@ export const NavBar = styled.div`
     right: 0;
   }
 
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;

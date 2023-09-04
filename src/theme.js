@@ -36,6 +36,6 @@ export const theme = {
     medium: "450px",
     large: "767px",
     ipadSmall: "1023px",
-    ipadMedium: "1280px",
+    ipadMedium: "1368px",
   },
 };

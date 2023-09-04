@@ -8,6 +8,14 @@ export const Content = styled.div`
   justify-content: space-between;
   gap: ${theme.gap.gapMedium};
 
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    margin: 120px 0 0 50px;
+  }
+
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+    margin: 50px -20px 0 50px;
+  }
+
   @media (max-width: ${theme.breakpoints.large}) {
     justify-content: center;
     align-items: center;
@@ -16,8 +24,6 @@ export const Content = styled.div`
   }
 
   @media (max-width: ${theme.breakpoints.medium}) {
-    justify-content: center;
-    align-items: center;
     gap: ${theme.gap.gapMedium};
     margin: 0;
   }
@@ -30,7 +36,7 @@ export const Header = styled.h2`
   line-height: normal;
   font-family: ${theme.fonts.familyBarlowCondensed};
 
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     font-size: ${theme.fontSize.normal};
     letter-spacing: 0.16875rem;
   }
@@ -40,6 +46,10 @@ export const LargeHeader = styled(Header)`
   font-size: ${theme.fontSize.large};
   font-family: ${theme.fonts.familyBellefair};
   color: hsl(${theme.colors.white});
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    font-size: ${theme.fontSize.heading3};
+  }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
     font-size: ${theme.fontSize.heading2};
@@ -97,9 +107,6 @@ export const Text = styled.div`
     background-color: hsl(${theme.colors.dark} / 56%);
   }
 
-  @media (max-width: ${theme.breakpoints.ipadSmall}) {
-  }
-
   @media (max-width: ${theme.breakpoints.large}) {
     font-size: ${theme.fontSize.medium};
     height: 12px;
@@ -119,6 +126,11 @@ export const LinkBackground = styled.div`
   height: 17.125rem;
   border-radius: 50%;
   background-color: hsl(${theme.colors.white});
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    width: 14.375rem;
+    height: 14.375rem;
+  }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
     width: 11.375rem;

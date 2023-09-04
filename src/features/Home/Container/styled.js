@@ -12,9 +12,14 @@ export const StyledWrapper = styled.div`
   max-width: 100vw;
   height: 100vh;
 
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    /* flex-direction: column; */
+    justify-content: center;
+  }
+
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
     background-image: url("https://i.postimg.cc/Znbb29s8/background-home-tablet.jpg");
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
   }
 
