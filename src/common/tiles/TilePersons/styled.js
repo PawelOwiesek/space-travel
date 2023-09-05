@@ -7,12 +7,10 @@ export const Container = styled.div`
   margin-left: 10rem;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    max-height: 600px;
     margin: -1rem 0 0 30rem;
   }
 
-  @media (max-width: ${theme.breakpoints.surfacePro}) {
-    max-height: 600px;
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     margin: -1rem 0 0 10rem;
   }
 
@@ -39,22 +37,22 @@ export const Heading = styled.div`
     margin: 15rem 0 2rem -30rem;
   }
 
-  @media (max-width: ${theme.breakpoints.surfacePro}) {
-    margin: 20rem 0 2rem -10rem;
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+    margin: 6rem 0 1rem -10rem;
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
-    margin: 6rem 0 0 5rem;
+    margin: 1rem 0 0 5rem;
     padding-bottom: 0.5rem;
   }
 
   @media (max-width: ${theme.breakpoints.medium}) {
-    margin: 9rem 0 2rem 0rem;
+    margin: 1rem 0 2rem 0rem;
     padding-bottom: 2rem;
   }
 
   @media (max-width: ${theme.breakpoints.small}) {
-    margin: 8rem 0 2rem 0rem;
+    margin: 4rem 0 2rem 0rem;
     padding-bottom: 2.5rem;
   }
 `;
@@ -96,8 +94,9 @@ export const Role = styled.h3`
     opacity: 0.4994;
   }
 
-  @media (max-width: ${theme.breakpoints.surfacePro}) {
-    margin-left: 11rem;
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+    margin-left: -15rem;
+    font-size: ${theme.fontSize.normal};
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
@@ -123,9 +122,9 @@ export const Name = styled(Role)`
     margin-left: 2rem;
   }
 
-  @media (max-width: ${theme.breakpoints.surfacePro}) {
-    font-size: ${theme.fontSize.heading3};
-    margin-left: 7rem;
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+    font-size: ${theme.fontSize.heading4};
+    margin-left: -15rem;
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
@@ -157,10 +156,10 @@ export const Description = styled.p`
     padding-left: 0.5rem;
   }
 
-  @media (max-width: ${theme.breakpoints.surfacePro}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     font-size: ${theme.fontSize.normal};
     line-height: 1.75rem;
-    margin-left: -3rem;
+    margin-left: -10rem;
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
@@ -213,26 +212,27 @@ export const ImagePerson = styled.img`
     margin: 5rem 0 0 30rem;
   }
 
-  @media (max-width: ${theme.breakpoints.surfacePro}) {
-    height: 24rem;
-    margin: 5rem 0 0 17rem;
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+    width: 12rem;
+    height: 15rem;
+    margin: 6rem 42rem 0 3rem;
 
     @media (max-width: ${theme.breakpoints.large}) {
       width: 9rem;
       height: 11rem;
-      margin: 9rem 6rem 0 3rem;
+      margin: 5rem 6rem 0 3rem;
     }
 
     @media (max-width: ${theme.breakpoints.medium}) {
       width: 11rem;
       height: 14rem;
-      margin: -30rem 0 0 3rem;
+      margin: -32rem 0 0 3rem;
     }
 
     @media (max-width: ${theme.breakpoints.small}) {
       max-width: 9rem;
       height: 11rem;
-      margin: -26rem 0 0 3rem;
+      margin: -25rem 0 0 3rem;
     }
   }
 `;

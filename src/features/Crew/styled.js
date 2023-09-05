@@ -10,7 +10,7 @@ export const List = styled.ul`
     flex-direction: column;
   }
 
-  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     margin: 0;
   }
 `;
@@ -35,16 +35,16 @@ export const Item = styled.li`
     left: 0;
     top: ${({ number }) =>
       number === 0
-        ? "-15vh"
+        ? "0vh"
         : number === 1
-        ? "-115vh"
+        ? "-100vh"
         : number === 2
-        ? "-215vh"
-        : "-315vh"};
+        ? "-200vh"
+        : "-300vh"};
     transition: 2s linear;
   }
 
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     text-align: center;
     flex-direction: row;
   }
@@ -73,24 +73,24 @@ export const Buttons = styled.div`
     left: 36rem;
   }
 
-  @media (max-width: ${theme.breakpoints.surfacePro}) {
-    top: 27rem;
-    left: 20rem;
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+    top: 14rem;
+    left: 31rem;
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
     left: 22rem;
-    top: 14rem;
+    top: 10rem;
   }
 
   @media (max-width: ${theme.breakpoints.medium}) {
     left: 4rem;
-    top: 23rem;
+    top: 16rem;
   }
 
   @media (max-width: ${theme.breakpoints.small}) {
     left: 3rem;
-    top: 16rem;
+    top: 14rem;
   }
 `;
 
