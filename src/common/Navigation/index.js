@@ -8,6 +8,7 @@ import {
   NavBar,
   Number,
 } from "./styled";
+import logo from "../images/logo.svg";
 
 const Navigation = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -19,7 +20,7 @@ const Navigation = () => {
   return (
     <>
       <Container>
-        <Logo />
+        <Logo src={logo} rel="logo" />
         <Divider />
         <NavBar>
           <LinkWrapper
