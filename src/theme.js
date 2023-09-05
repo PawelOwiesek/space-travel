@@ -35,6 +35,7 @@ export const theme = {
     small: "320px",
     medium: "450px",
     large: "767px",
+    surfacePro: "950px",
     ipadSmall: "1023px",
     ipadMedium: "1368px",
   },
