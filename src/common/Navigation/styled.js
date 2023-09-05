@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 import { theme } from "../../theme";
+import { ReactComponent as open } from "../images/icon-hamburger.svg";
+import { ReactComponent as close } from "../images/icon-close.svg";
 
 export const Container = styled.div`
   display: flex;
@@ -81,7 +83,7 @@ export const NavBar = styled.div`
     width: 16rem;
     height: 100vh;
     gap: ${theme.gap.gapSmall};
-    transform: translateX(100%);
+    transform: ${({ active }) => (active ? null : "translateX(100%)")};
     position: fixed;
     right: -1rem;
     top: 0;
@@ -91,6 +93,21 @@ export const NavBar = styled.div`
     gap: ${theme.gap.gapLarge};
     padding: 8rem 0 0 2rem;
   }
+`;
+
+export const Open = styled(open)`
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  display: ${({ active }) => (active ? "none" : "flex")};
+`;
+
+export const Close = styled(close)`
+  position: fixed;
+  top: 2rem;
+  right: 2.1rem;
+  display: ${({ active }) => (active ? "flex" : "none")};
+  z-index: 7;
 `;
 
 export const LinkWrapper = styled.p`
@@ -105,6 +122,10 @@ export const LinkWrapper = styled.p`
   &:hover {
     border-bottom: 4px solid hsl(${theme.colors.light} / 20%);
     padding: 33px 0;
+    @media (max-width: ${theme.breakpoints.large}) {
+      border: none;
+      padding: 0;
+    }
   }
 
   border-bottom: ${({ active }) =>

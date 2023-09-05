@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {
+  Close,
   Container,
   Divider,
   LinkTo,
@@ -7,11 +8,17 @@ import {
   Logo,
   NavBar,
   Number,
+  Open,
 } from "./styled";
 import logo from "../images/logo.svg";
 
 const Navigation = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [active, setActive] = useState(false);
+
+  const onBurgerClick = () => {
+    setActive(!active);
+  };
 
   const setLinkToAsActive = (index) => {
     setActiveIndex(index);
@@ -22,7 +29,9 @@ const Navigation = () => {
       <Container>
         <Logo src={logo} rel="logo" />
         <Divider />
-        <NavBar>
+        <Close active={active} onClick={() => onBurgerClick()} />
+        <Open active={active} onClick={() => onBurgerClick()} />
+        <NavBar active={active}>
           <LinkWrapper
             active={activeIndex === 0}
             onClick={() => setLinkToAsActive(0)}
