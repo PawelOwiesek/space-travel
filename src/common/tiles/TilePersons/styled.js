@@ -129,7 +129,7 @@ export const Name = styled(Role)`
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
-    margin: -2px 0 0 -5rem;
+    margin: -2px 0 0 0;
     font-size: ${theme.fontSize.medium};
   }
 

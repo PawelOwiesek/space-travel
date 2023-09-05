@@ -9,7 +9,7 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   position: absolute;
-  z-index: 1;
+  z-index: 5;
   margin-top: 50px;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
@@ -96,18 +96,26 @@ export const NavBar = styled.div`
 `;
 
 export const Open = styled(open)`
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  display: ${({ active }) => (active ? "none" : "flex")};
+  display: none;
+
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    display: ${({ active }) => (active ? "none" : "flex")};
+  }
 `;
 
 export const Close = styled(close)`
-  position: fixed;
-  top: 2rem;
-  right: 2.1rem;
-  display: ${({ active }) => (active ? "flex" : "none")};
-  z-index: 7;
+  display: none;
+
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+    position: fixed;
+    top: 2rem;
+    right: 2.1rem;
+    display: ${({ active }) => (active ? "flex" : "none")};
+    z-index: 7;
+  }
 `;
 
 export const LinkWrapper = styled.p`
@@ -122,7 +130,7 @@ export const LinkWrapper = styled.p`
   &:hover {
     border-bottom: 4px solid hsl(${theme.colors.light} / 20%);
     padding: 33px 0;
-    @media (max-width: ${theme.breakpoints.large}) {
+    @media (max-width: ${theme.breakpoints.ipadSmall}) {
       border: none;
       padding: 0;
     }
@@ -132,7 +140,7 @@ export const LinkWrapper = styled.p`
     active ? `4px solid hsl(${theme.colors.white})` : null};
   padding: 33px 0;
 
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     border: none;
     padding: 0;
   }
