@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 import { theme } from "../../theme";
-import { ReactComponent as logo } from "../images/logo.svg";
 
 export const Container = styled.div`
   display: flex;
@@ -11,7 +10,8 @@ export const Container = styled.div`
   z-index: 1;
   margin-top: 50px;
 
-  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    margin-top: 20px;
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
@@ -23,7 +23,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Logo = styled(logo)`
+export const Logo = styled.img`
   margin: 0 53px;
   @media (max-width: ${theme.breakpoints.large}) {
     margin: 20px 0 0 20px;
@@ -31,6 +31,16 @@ export const Logo = styled(logo)`
 
   @media (max-width: ${theme.breakpoints.small}) {
     margin: 10px 0 0 10px;
+  }
+
+  @media (max-width: ${theme.breakpoints.medium}) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  @media (max-width: ${theme.breakpoints.small}) {
+    width: 2rem;
+    height: 2rem;
   }
 `;
 

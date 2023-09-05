@@ -8,7 +8,10 @@ export const List = styled.ul`
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     flex-direction: column;
-    overflow-y: auto;
+  }
+
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    margin: 0;
   }
 `;
 
@@ -40,7 +43,22 @@ export const Item = styled.li`
         : "-315vh"};
     transition: 2s linear;
   }
+
+  @media (max-width: ${theme.breakpoints.large}) {
+    text-align: center;
+    flex-direction: row;
+  }
+
+  @media (max-width: ${theme.breakpoints.medium}) {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  @media (max-width: ${theme.breakpoints.small}) {
+    text-align: center;
+  }
 `;
+
 export const Buttons = styled.div`
   display: flex;
   margin-top: 7.5rem;
@@ -51,8 +69,28 @@ export const Buttons = styled.div`
   z-index: 4;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    top: 30rem;
+    top: 22rem;
+    left: 36rem;
+  }
+
+  @media (max-width: ${theme.breakpoints.surfacePro}) {
+    top: 27rem;
     left: 20rem;
+  }
+
+  @media (max-width: ${theme.breakpoints.large}) {
+    left: 22rem;
+    top: 14rem;
+  }
+
+  @media (max-width: ${theme.breakpoints.medium}) {
+    left: 4rem;
+    top: 23rem;
+  }
+
+  @media (max-width: ${theme.breakpoints.small}) {
+    left: 3rem;
+    top: 16rem;
   }
 `;
 
@@ -68,5 +106,11 @@ export const Button = styled.button`
   &:hover {
     opacity: 0.454363;
     transform: scale(1);
+  }
+
+  @media (max-width: ${theme.breakpoints.large}) {
+    width: 15px;
+    height: 15px;
+    margin-right: -10px;
   }
 `;
