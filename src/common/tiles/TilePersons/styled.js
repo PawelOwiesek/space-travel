@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin-left: 10rem;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    margin: -1rem 0 0 30rem;
+    margin: -10rem 0 0 5rem;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
@@ -34,7 +34,7 @@ export const Heading = styled.div`
   margin: 17rem 0 9rem;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    margin: 15rem 0 2rem -30rem;
+    margin: 15rem 0 6rem -5rem;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
@@ -89,8 +89,8 @@ export const Role = styled.h3`
   opacity: 0.5042;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    font-size: ${theme.fontSize.heading5};
-    margin-left: 6rem;
+    font-size: ${theme.fontSize.heading3};
+    margin-left: 2rem;
     opacity: 0.4994;
   }
 
@@ -119,7 +119,7 @@ export const Name = styled(Role)`
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     font-size: ${theme.fontSize.heading3};
-    margin-left: 2rem;
+    margin: 0;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
@@ -148,7 +148,7 @@ export const Description = styled.p`
   width: 27.75rem;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    font-size: ${theme.fontSize.normal};
+    font-size: ${theme.fontSize.medium};
     line-height: 1.75rem;
     text-align: center;
     max-width: 37rem;
@@ -209,7 +209,7 @@ export const ImagePerson = styled.img`
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     width: 18rem;
     height: 25rem;
-    margin: 5rem 0 0 30rem;
+    margin: 10rem 15rem 0 0;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {

@@ -7,10 +7,6 @@ export const List = styled.ul`
   overflow: hidden;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    flex-direction: column;
-  }
-
-  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     margin: 0;
   }
 `;
@@ -29,7 +25,7 @@ export const Item = styled.li`
       : "-300vw"};
   transition: 2s linear;
 
-  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     height: 100vh;
     flex-direction: column;
     left: 0;
@@ -69,8 +65,8 @@ export const Buttons = styled.div`
   z-index: 4;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    top: 22rem;
-    left: 36rem;
+    top: 25rem;
+    left: 15rem;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
