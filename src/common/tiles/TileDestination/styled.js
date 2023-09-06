@@ -2,10 +2,17 @@ import { styled } from "styled-components";
 import { theme } from "../../../theme";
 
 export const Image = styled.img`
+  position: relative;
+
+  @media (max-width: ${theme.breakpoints.large}) {
+    max-width: 10rem;
+    max-height: 10rem;
+    margin: 2rem auto;
+  }
+
   @media (max-width: ${theme.breakpoints.small}) {
     width: 6rem;
     height: 6rem;
-    margin: 2rem auto;
   }
 
   animation: spin 200s linear infinite;
@@ -20,23 +27,29 @@ export const Image = styled.img`
 `;
 
 export const ImageWrapper = styled.div`
-  max-width: 300px;
-  margin-top: 1rem;
+  @media (max-width: ${theme.breakpoints.large}) {
+    margin-top: 1rem;
+  }
 `;
 
 export const Header = styled.h2`
-  @media (max-width: ${theme.breakpoints.small}) {
+  @media (max-width: ${theme.breakpoints.large}) {
     display: flex;
     font-family: ${theme.fonts.familyBarlowCondensed};
     font-size: ${theme.fontSize.normal};
     gap: ${theme.gap.gapNormal};
     letter-spacing: 0.16875rem;
     text-transform: uppercase;
+    margin-left: 100px;
+  }
+
+  @media (max-width: ${theme.breakpoints.medium}) {
+    margin: 0;
   }
 `;
 
 export const Number = styled.span`
-  @media (max-width: ${theme.breakpoints.small}) {
+  @media (max-width: ${theme.breakpoints.large}) {
     font-family: ${theme.fonts.familyBarlowCondensed};
     font-size: ${theme.fontSize.normal};
     letter-spacing: 0.16875rem;
@@ -45,17 +58,16 @@ export const Number = styled.span`
 `;
 
 export const Container = styled.div`
-  @media (max-width: ${theme.breakpoints.small}) {
+  @media (max-width: ${theme.breakpoints.large}) {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    max-width: 300px;
   }
 `;
 
 export const Planet = styled.h1`
-  @media (max-width: ${theme.breakpoints.small}) {
+  @media (max-width: ${theme.breakpoints.large}) {
     color: hsl(${theme.colors.white});
     text-transform: uppercase;
     font-family: ${theme.fonts.familyBellefair};
@@ -65,31 +77,42 @@ export const Planet = styled.h1`
 `;
 
 export const Description = styled.p`
-  max-width: 300px;
-  color: hsl(${theme.colors.light});
-  text-align: center;
-  font-size: ${theme.fontSize.small};
-  font-style: normal;
-  line-height: 1.4;
-  border-bottom: 1px solid hsl(${theme.colors.light} / 20%);
-  padding-bottom: 0.5rem;
+  @media (max-width: ${theme.breakpoints.large}) {
+    max-width: 450px;
+    color: hsl(${theme.colors.light});
+    text-align: center;
+    font-size: ${theme.fontSize.normal};
+    font-style: normal;
+    line-height: 1.4;
+    border-bottom: 1px solid hsl(${theme.colors.light} / 20%);
+    padding-bottom: 0.5rem;
+    margin: 0 1rem;
+  }
+
+  @media (max-width: ${theme.breakpoints.medium}) {
+    font-size: ${theme.fontSize.small};
+  }
 `;
 
 export const DistanceWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: last baseline;
-  gap: ${theme.gap.gapSmall};
-  padding-top: 0.2rem;
-  text-transform: uppercase;
-  color: hsl(${theme.colors.light});
-  letter-spacing: 0.14763rem;
-  font-size: ${theme.fontSize.small};
-  font-family: ${theme.fonts.familyBarlowCondensed};
+  @media (max-width: ${theme.breakpoints.large}) {
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+    gap: ${theme.gap.gapSmall};
+    padding-top: 0.2rem;
+    text-transform: uppercase;
+    color: hsl(${theme.colors.light});
+    letter-spacing: 0.14763rem;
+    font-size: ${theme.fontSize.small};
+    font-family: ${theme.fonts.familyBarlowCondensed};
+  }
 `;
 
 export const Distance = styled.p`
-  font-size: ${theme.fontSize.medium};
-  font-family: ${theme.fonts.familyBellefair};
-  color: hsl(${theme.colors.white});
+  @media (max-width: ${theme.breakpoints.large}) {
+    font-size: ${theme.fontSize.medium};
+    font-family: ${theme.fonts.familyBellefair};
+    color: hsl(${theme.colors.white});
+  }
 `;

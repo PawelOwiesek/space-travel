@@ -18,9 +18,9 @@ export const Item = styled.li`
   grid-template-columns: repeat(2, 1fr);
   color: white;
 
-  @media (max-width: ${theme.breakpoints.small}) {
+  @media (max-width: ${theme.breakpoints.large}) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
     left: ${({ number }) =>
       number === 0
@@ -32,14 +32,27 @@ export const Item = styled.li`
         : "-300vw"};
     transition: 2s linear;
   }
+
+  @media (max-width: ${theme.breakpoints.medium}) {
+    flex-direction: column;
+  }
 `;
 export const ButtonsWrapper = styled.div`
-  @media (max-width: ${theme.breakpoints.small}) {
+  @media (max-width: ${theme.breakpoints.large}) {
     display: flex;
     justify-content: center;
+    margin: 0 20px;
     gap: ${theme.gap.gapSmall};
-    position: fixed;
-    top: 230px;
+    position: absolute;
+    top: 260px;
+  }
+
+  @media (max-width: ${theme.breakpoints.medium}) {
+    top: 250px;
+    margin: 0;
+  }
+  @media (max-width: ${theme.breakpoints.small}) {
+    top: 200px;
   }
 `;
 
