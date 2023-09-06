@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/space-travel/static/js/main.456b2d82.js",
+    "main.js": "/space-travel/static/js/main.ff39d29e.js",
     "static/js/787.d7d8ac67.chunk.js": "/space-travel/static/js/787.d7d8ac67.chunk.js",
     "index.html": "/space-travel/index.html",
     "static/media/logo.svg": "/space-travel/static/media/logo.48539cf7633d9e3bff69f074601b65cb.svg",
     "static/media/icon-close.svg": "/space-travel/static/media/icon-close.d47fda63cbd8b3fedbbc1b2a53f64470.svg",
     "static/media/icon-hamburger.svg": "/space-travel/static/media/icon-hamburger.5273efa7c50e96ef3e51e7a2b54048ce.svg",
-    "main.456b2d82.js.map": "/space-travel/static/js/main.456b2d82.js.map",
+    "main.ff39d29e.js.map": "/space-travel/static/js/main.ff39d29e.js.map",
     "787.d7d8ac67.chunk.js.map": "/space-travel/static/js/787.d7d8ac67.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.456b2d82.js"
+    "static/js/main.ff39d29e.js"
   ]
 }
