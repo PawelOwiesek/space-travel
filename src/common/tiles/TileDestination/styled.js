@@ -2,8 +2,12 @@ import { styled } from "styled-components";
 import { theme } from "../../../theme";
 
 export const Image = styled.img`
-  width: 300px;
-  height: 300px;
+  @media (max-width: ${theme.breakpoints.small}) {
+    width: 6rem;
+    height: 6rem;
+    margin: 2rem auto;
+  }
+
   animation: spin 200s linear infinite;
   @keyframes spin {
     0% {
@@ -15,36 +19,77 @@ export const Image = styled.img`
   }
 `;
 
-export const Wrapper = styled.div`
-  display: flex;
-  gap: ${theme.gap.gapSmall};
+export const ImageWrapper = styled.div`
+  max-width: 300px;
+  margin-top: 1rem;
 `;
 
-export const Button = styled.button`
-  background-color: transparent;
-  color: hsl(${theme.colors.light} / 88%);
+export const Header = styled.h2`
+  @media (max-width: ${theme.breakpoints.small}) {
+    display: flex;
+    font-family: ${theme.fonts.familyBarlowCondensed};
+    font-size: ${theme.fontSize.normal};
+    gap: ${theme.gap.gapNormal};
+    letter-spacing: 0.16875rem;
+    text-transform: uppercase;
+  }
+`;
+
+export const Number = styled.span`
+  @media (max-width: ${theme.breakpoints.small}) {
+    font-family: ${theme.fonts.familyBarlowCondensed};
+    font-size: ${theme.fontSize.normal};
+    letter-spacing: 0.16875rem;
+    color: hsl(${theme.colors.light} / 40%);
+  }
+`;
+
+export const Container = styled.div`
+  @media (max-width: ${theme.breakpoints.small}) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    max-width: 300px;
+  }
+`;
+
+export const Planet = styled.h1`
+  @media (max-width: ${theme.breakpoints.small}) {
+    color: hsl(${theme.colors.white});
+    text-transform: uppercase;
+    font-family: ${theme.fonts.familyBellefair};
+    padding-top: 2rem;
+    font-size: ${theme.fontSize.heading4};
+  }
+`;
+
+export const Description = styled.p`
+  max-width: 300px;
+  color: hsl(${theme.colors.light});
+  text-align: center;
+  font-size: ${theme.fontSize.small};
+  font-style: normal;
+  line-height: 1.4;
+  border-bottom: 1px solid hsl(${theme.colors.light} / 20%);
+  padding-bottom: 0.5rem;
+`;
+
+export const DistanceWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+  gap: ${theme.gap.gapSmall};
+  padding-top: 0.2rem;
   text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 0.14rem;
+  color: hsl(${theme.colors.light});
+  letter-spacing: 0.14763rem;
   font-size: ${theme.fontSize.small};
   font-family: ${theme.fonts.familyBarlowCondensed};
-  border: none;
-  border-bottom: 4px solid transparent;
+`;
 
-  &:hover {
-    border-bottom: 4px solid hsl(${theme.colors.light} / 20%);
-    padding: 5px 0;
-    @media (max-width: ${theme.breakpoints.ipadSmall}) {
-      border: none;
-      padding: 0;
-    }
-  }
-  border-bottom: ${({ index }) =>
-    index ? `4px solid hsl(${theme.colors.white})` : null};
-  padding: 5px 0;
-
-  @media (max-width: ${theme.breakpoints.ipadSmall}) {
-    border: none;
-    padding: 0;
-  }
+export const Distance = styled.p`
+  font-size: ${theme.fontSize.medium};
+  font-family: ${theme.fonts.familyBellefair};
+  color: hsl(${theme.colors.white});
 `;
