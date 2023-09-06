@@ -20,8 +20,9 @@ const Navigation = () => {
     setActive(!active);
   };
 
-  const setLinkToAsActive = (index) => {
+  const setLinkAsActive = (index) => {
     setActiveIndex(index);
+    setActive(false);
   };
 
   return (
@@ -34,28 +35,28 @@ const Navigation = () => {
         <NavBar active={active}>
           <LinkWrapper
             active={activeIndex === 0}
-            onClick={() => setLinkToAsActive(0)}
+            onClick={() => setLinkAsActive(0)}
           >
             <Number>00</Number>
             <LinkTo to="/home">Home</LinkTo>
           </LinkWrapper>
           <LinkWrapper
             active={activeIndex === 1}
-            onClick={() => setLinkToAsActive(1)}
+            onClick={() => setLinkAsActive(1)}
           >
             <Number>01</Number>
             <LinkTo to="/destination">Destination</LinkTo>
           </LinkWrapper>
           <LinkWrapper
             active={activeIndex === 2}
-            onClick={() => setLinkToAsActive(2)}
+            onClick={() => setLinkAsActive(2)}
           >
             <Number>02</Number>
             <LinkTo to="/crew">Crew</LinkTo>
           </LinkWrapper>
           <LinkWrapper
             active={activeIndex === 3}
-            onClick={() => setLinkToAsActive(3)}
+            onClick={() => setLinkAsActive(3)}
           >
             <Number>03</Number>
             <LinkTo to="/technology">Technology</LinkTo>
