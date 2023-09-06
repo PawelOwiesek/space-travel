@@ -68,10 +68,6 @@ export const Number = styled.p`
     font-size: ${theme.fontSize.medium};
   }
 
-  @media (max-width: ${theme.breakpoints.medium}) {
-    font-size: ${theme.fontSize.medium};
-  }
-
   @media (max-width: ${theme.breakpoints.small}) {
     font-size: ${theme.fontSize.normal};
   }
@@ -133,10 +129,6 @@ export const Name = styled(Role)`
   }
 
   @media (max-width: ${theme.breakpoints.medium}) {
-    margin: -2px 0 0 -80px;
-  }
-
-  @media (max-width: ${theme.breakpoints.small}) {
     margin: -2px 0 0 -80px;
   }
 `;
