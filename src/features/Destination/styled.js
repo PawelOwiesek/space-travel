@@ -6,8 +6,11 @@ export const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
+
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+  }
 `;
 
 export const Item = styled.li`

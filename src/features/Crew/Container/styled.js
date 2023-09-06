@@ -11,6 +11,7 @@ export const StyledWrapper = styled.div`
   background-position: center;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     background-image: url("https://i.postimg.cc/BZmh47BG/background-crew-tablet.jpg");
