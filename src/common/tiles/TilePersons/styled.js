@@ -172,26 +172,6 @@ export const Description = styled.p`
   }
 `;
 
-export const Buttons = styled.div`
-  display: flex;
-  margin-top: 7.5rem;
-  gap: ${theme.gap.gapMedium};
-`;
-
-export const Button = styled.button`
-  color: hsl(${theme.colors.white});
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  opacity: ${({ active }) => (active ? 1 : 0.174363)};
-  transition: 0.4s;
-
-  &:hover {
-    opacity: 1;
-    transform: scale(1);
-  }
-`;
-
 export const ImagePerson = styled.img`
   width: 800px;
   height: 699px;
