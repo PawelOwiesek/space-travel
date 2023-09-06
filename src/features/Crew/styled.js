@@ -8,6 +8,7 @@ export const List = styled.ul`
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     margin: 0;
+    flex-direction: column;
   }
 `;
 
@@ -25,9 +26,9 @@ export const Item = styled.li`
       : "-300vw"};
   transition: 2s linear;
 
-  @media (max-width: ${theme.breakpoints.ipadSmall}) {
-    height: 100vh;
-    flex-direction: column;
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    height: 100vh !important;
+    flex-direction: row;
     left: 0;
     top: ${({ number }) =>
       number === 0
