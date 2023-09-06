@@ -8,9 +8,6 @@ export const List = styled.ul`
   padding: 0;
   overflow-x: hidden;
   margin: 0;
-
-  @media (max-width: ${theme.breakpoints.ipadSmall}) {
-  }
 `;
 
 export const Item = styled.li`
@@ -21,7 +18,7 @@ export const Item = styled.li`
   grid-template-columns: repeat(2, 1fr);
   color: white;
 
-  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -56,12 +53,16 @@ export const Item = styled.li`
   }
 `;
 export const ButtonsWrapper = styled.div`
-  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+  @media (max-width: ${theme.breakpoints.ipadMedium}) {
     display: flex;
     justify-content: center;
-    margin: 0 70px;
     gap: ${theme.gap.gapSmall};
     position: absolute;
+    top: 500px;
+  }
+
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+    margin: 0 70px;
     top: 270px;
   }
 
@@ -89,6 +90,7 @@ export const Button = styled.button`
   font-family: ${theme.fonts.familyBarlowCondensed};
   border: none;
   border-bottom: 0.25rem solid transparent;
+  cursor: pointer;
 
   &:hover {
     border-bottom: 0.25rem solid hsl(${theme.colors.light} / 20%);
