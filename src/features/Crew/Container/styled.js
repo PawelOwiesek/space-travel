@@ -9,7 +9,7 @@ export const StyledWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  max-width: 100vw;
+  width: 100vw;
   height: 100vh;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {

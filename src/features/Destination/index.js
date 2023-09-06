@@ -1,7 +1,7 @@
 import Container from "./Container";
 import Tile from "../../common/tiles/TileDestination";
 import data from "../../data.json";
-import { List } from "./styled";
+import { Item, List } from "./styled";
 
 const Destination = () => {
   return (
@@ -9,7 +9,7 @@ const Destination = () => {
       <Container>
         {data.destinations.map((item) => (
           <List>
-            <li key={item.name}>
+            <Item key={item.name}>
               <Tile
                 planet={item.name}
                 description={item.description}
@@ -18,7 +18,7 @@ const Destination = () => {
                 image={item.images.png}
                 alt={item.name}
               />
-            </li>
+            </Item>
           </List>
         ))}
       </Container>
