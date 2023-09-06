@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
   display: flex;
-  justify-content: space-around;
   align-items: center;
   background-image: url("https://i.postimg.cc/NFCxpRV9/background-destination-desktop.jpg");
   background-repeat: no-repeat;
