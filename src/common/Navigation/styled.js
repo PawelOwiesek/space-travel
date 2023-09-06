@@ -27,7 +27,8 @@ export const Container = styled.div`
 
 export const Logo = styled.img`
   margin: 0 53px;
-  @media (max-width: ${theme.breakpoints.large}) {
+
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     margin: 20px 0 0 20px;
   }
 

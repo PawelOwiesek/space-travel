@@ -18,6 +18,21 @@ export const Item = styled.li`
   grid-template-columns: repeat(2, 1fr);
   color: white;
 
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: ${({ number }) =>
+      number === 0
+        ? "0vw"
+        : number === 1
+        ? "-100vw"
+        : number === 2
+        ? "-200vw"
+        : "-300vw"};
+    transition: 2s linear;
+  }
+
   @media (max-width: ${theme.breakpoints.large}) {
     display: flex;
     flex-direction: row;
@@ -38,12 +53,17 @@ export const Item = styled.li`
   }
 `;
 export const ButtonsWrapper = styled.div`
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     display: flex;
     justify-content: center;
-    margin: 0 20px;
+    margin: 0 70px;
     gap: ${theme.gap.gapSmall};
     position: absolute;
+    top: 270px;
+  }
+
+  @media (max-width: ${theme.breakpoints.large}) {
+    margin: 0 60px;
     top: 260px;
   }
 

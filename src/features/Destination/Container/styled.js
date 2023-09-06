@@ -12,9 +12,11 @@ export const StyledWrapper = styled.div`
 
   @media (max-width: 1024px) {
     background-image: url("https://i.postimg.cc/wvLP4xYc/background-destination-tablet.jpg");
+    height: auto;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 767px) {
     background-image: url("https://i.postimg.cc/tJdKJqrC/background-destination-mobile.jpg");
+    height: 100vh;
   }
 `;

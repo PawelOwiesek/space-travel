@@ -4,9 +4,13 @@ import { theme } from "../../../theme";
 export const Image = styled.img`
   position: relative;
 
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     max-width: 10rem;
     max-height: 10rem;
+    margin: 0.5rem auto;
+  }
+
+  @media (max-width: ${theme.breakpoints.large}) {
     margin: 2rem auto;
   }
 
@@ -27,19 +31,36 @@ export const Image = styled.img`
 `;
 
 export const ImageWrapper = styled.div`
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 30px;
+  }
+
   @media (max-width: ${theme.breakpoints.large}) {
-    margin-top: 1rem;
+    margin: 1rem;
+    padding: 0;
+  }
+
+  @media (max-width: ${theme.breakpoints.medium}) {
+    margin: 1rem;
   }
 `;
 
 export const Header = styled.h2`
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     display: flex;
     font-family: ${theme.fonts.familyBarlowCondensed};
-    font-size: ${theme.fontSize.normal};
+    font-size: ${theme.fontSize.heading5};
     gap: ${theme.gap.gapNormal};
     letter-spacing: 0.16875rem;
     text-transform: uppercase;
+  }
+
+  @media (max-width: ${theme.breakpoints.large}) {
+    font-size: ${theme.fontSize.normal};
     margin-left: 100px;
   }
 
@@ -49,16 +70,20 @@ export const Header = styled.h2`
 `;
 
 export const Number = styled.span`
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     font-family: ${theme.fonts.familyBarlowCondensed};
-    font-size: ${theme.fontSize.normal};
+    font-size: ${theme.fontSize.heading5};
     letter-spacing: 0.16875rem;
     color: hsl(${theme.colors.light} / 40%);
+  }
+
+  @media (max-width: ${theme.breakpoints.large}) {
+    font-size: ${theme.fontSize.normal};
   }
 `;
 
 export const Container = styled.div`
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -67,7 +92,7 @@ export const Container = styled.div`
 `;
 
 export const Planet = styled.h1`
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     color: hsl(${theme.colors.white});
     text-transform: uppercase;
     font-family: ${theme.fonts.familyBellefair};
@@ -77,7 +102,7 @@ export const Planet = styled.h1`
 `;
 
 export const Description = styled.p`
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     max-width: 450px;
     color: hsl(${theme.colors.light});
     text-align: center;
@@ -95,7 +120,7 @@ export const Description = styled.p`
 `;
 
 export const DistanceWrapper = styled.div`
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     display: flex;
     justify-content: center;
     align-items: last baseline;
@@ -110,7 +135,7 @@ export const DistanceWrapper = styled.div`
 `;
 
 export const Distance = styled.p`
-  @media (max-width: ${theme.breakpoints.large}) {
+  @media (max-width: ${theme.breakpoints.ipadSmall}) {
     font-size: ${theme.fontSize.medium};
     font-family: ${theme.fonts.familyBellefair};
     color: hsl(${theme.colors.white});
