@@ -104,6 +104,11 @@ export const Open = styled(open)`
     right: 2rem;
     display: ${({ active }) => (active ? "none" : "flex")};
   }
+
+  @media (max-width: ${theme.breakpoints.small}) {
+    top: 1rem;
+    right: 1rem;
+  }
 `;
 
 export const Close = styled(close)`
@@ -115,6 +120,11 @@ export const Close = styled(close)`
     right: 2.1rem;
     display: ${({ active }) => (active ? "flex" : "none")};
     z-index: 7;
+  }
+
+  @media (max-width: ${theme.breakpoints.small}) {
+    top: 1rem;
+    right: 1rem;
   }
 `;
 
