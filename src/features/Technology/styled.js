@@ -12,6 +12,7 @@ export const List = styled.ul`
 export const Item = styled.li`
   display: flex;
   width: 100vw;
+  height: 100vh;
   justify-items: center;
   flex-direction: row;
   position: relative;
@@ -21,8 +22,8 @@ export const Item = styled.li`
   color: white;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    align-items: center;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
@@ -30,7 +31,6 @@ export const Item = styled.li`
   }
 
   @media (max-width: ${theme.breakpoints.medium}) {
-    flex-direction: column;
     align-items: center;
     margin-top: 5rem;
   }
@@ -107,13 +107,13 @@ export const SubTitle = styled.div`
   margin-bottom: 6rem;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    margin-left: -20rem;
-    margin-bottom: 0;
+    font-size: ${theme.fontSize.heading2};
+    margin: 8rem auto;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
-    font-size: ${theme.fontSize.heading5};
-    margin: 0;
+    font-size: ${theme.fontSize.heading4};
+    margin: 3rem auto;
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
@@ -129,13 +129,13 @@ export const SubTitle = styled.div`
 export const Number = styled.p`
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     font-family: ${theme.fonts.familyBarlowCondensed};
-    font-size: ${theme.fontSize.heading3};
+    font-size: ${theme.fontSize.heading2};
     letter-spacing: 0.16875rem;
     color: hsl(${theme.colors.light} / 60%);
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
-    font-size: ${theme.fontSize.heading5};
+    font-size: ${theme.fontSize.heading4};
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
