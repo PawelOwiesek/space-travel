@@ -11,41 +11,29 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  display: grid;
+  display: flex;
   width: 100vw;
-  align-items: center;
   justify-items: center;
-  grid-template-columns: repeat(2, 1fr);
+  flex-direction: row;
+  position: relative;
+  left: ${({ number }) =>
+    number === 0
+      ? "0vw"
+      : number === 1
+      ? "-100vw"
+      : number === 2
+      ? "-200vw"
+      : "-300vw"};
+  transition: 2s linear;
   color: white;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    display: flex;
+    align-items: center;
     flex-direction: column;
-    position: relative;
-    left: ${({ number }) =>
-      number === 0
-        ? "0vw"
-        : number === 1
-        ? "-100vw"
-        : number === 2
-        ? "-200vw"
-        : "-300vw"};
-    transition: 2s linear;
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
-    display: flex;
     flex-direction: row;
-    position: relative;
-    left: ${({ number }) =>
-      number === 0
-        ? "0vw"
-        : number === 1
-        ? "-100vw"
-        : number === 2
-        ? "-200vw"
-        : "-300vw"};
-    transition: 2s linear;
   }
 
   @media (max-width: ${theme.breakpoints.medium}) {
@@ -53,12 +41,16 @@ export const Item = styled.li`
   }
 `;
 export const ButtonsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: ${theme.gap.gapSmall};
+  position: absolute;
+  top: 110px;
+  left: 42%;
+
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    display: flex;
-    justify-content: center;
-    gap: ${theme.gap.gapSmall};
-    position: absolute;
     top: 500px;
+    left: auto;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {

@@ -3,6 +3,8 @@ import { theme } from "../../../theme";
 
 export const Image = styled.img`
   position: relative;
+  max-width: 22rem;
+  margin: 0 10rem 0 0;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     max-width: 18rem;
@@ -37,8 +39,13 @@ export const Image = styled.img`
 `;
 
 export const ImageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 4rem 0 0 12rem;
+
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    display: flex;
+    flex-direction: row;
     margin: 70px 0 0;
     padding: 30px;
   }
@@ -60,14 +67,17 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Header = styled.h2`
+  display: flex;
+  font-family: ${theme.fonts.familyBarlowCondensed};
+  font-size: ${theme.fontSize.heading3};
+  gap: ${theme.gap.gapNormal};
+  letter-spacing: 0.16875rem;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    display: flex;
-    font-family: ${theme.fonts.familyBarlowCondensed};
-    font-size: ${theme.fontSize.heading3};
-    gap: ${theme.gap.gapNormal};
-    letter-spacing: 0.16875rem;
-    text-transform: uppercase;
     margin-left: -20rem;
+    margin-bottom: 0;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
@@ -103,21 +113,26 @@ export const Number = styled.span`
 `;
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 850px;
+
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    justify-content: center;
   }
 `;
 
 export const Planet = styled.h1`
+  color: hsl(${theme.colors.white});
+  text-transform: uppercase;
+  font-family: ${theme.fonts.familyBellefair};
+  padding-top: 8rem;
+  font-size: ${theme.fontSize.large};
+
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    color: hsl(${theme.colors.white});
-    text-transform: uppercase;
-    font-family: ${theme.fonts.familyBellefair};
-    padding-top: 2rem;
     font-size: ${theme.fontSize.heading2};
+    padding-top: 2rem;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
@@ -126,16 +141,18 @@ export const Planet = styled.h1`
 `;
 
 export const Description = styled.p`
+  border-bottom: 1px solid hsl(${theme.colors.light} / 20%);
+  padding: 0 0 4rem 0;
+  color: hsl(${theme.colors.light});
+  font-size: ${theme.fontSize.heading5};
+  font-style: normal;
+  line-height: 1.4;
+
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     max-width: 750px;
-    color: hsl(${theme.colors.light});
-    text-align: center;
-    font-size: ${theme.fontSize.heading5};
-    font-style: normal;
-    line-height: 1.4;
-    border-bottom: 1px solid hsl(${theme.colors.light} / 20%);
-    padding-bottom: 0.5rem;
+    padding: 0 0 0.5rem 0;
     margin: 0 1rem;
+    text-align: center;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
@@ -149,18 +166,20 @@ export const Description = styled.p`
 `;
 
 export const DistanceWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  gap: ${theme.gap.gapSmall};
+  padding-top: 1rem;
+  text-transform: uppercase;
+  color: hsl(${theme.colors.light});
+  letter-spacing: 0.14763rem;
+  font-size: ${theme.fontSize.heading5};
+  font-family: ${theme.fonts.familyBarlowCondensed};
+
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    display: flex;
     justify-content: center;
     align-self: center;
-
-    gap: ${theme.gap.gapSmall};
     padding-top: 0.2rem;
-    text-transform: uppercase;
-    color: hsl(${theme.colors.light});
-    letter-spacing: 0.14763rem;
-    font-size: ${theme.fontSize.heading5};
-    font-family: ${theme.fonts.familyBarlowCondensed};
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {

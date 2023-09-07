@@ -3,7 +3,7 @@ import { theme } from "../../../theme";
 
 export const StyledWrapper = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-image: url("https://i.postimg.cc/Mp3xBYwk/background-crew-desktop.jpg");
   background-repeat: no-repeat;
