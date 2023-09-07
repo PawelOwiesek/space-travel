@@ -60,7 +60,7 @@ export const ButtonsWrapper = styled.div`
   }
 
   @media (max-width: ${theme.breakpoints.medium}) {
-    top: 270px;
+    top: 300px;
     margin: 0 auto;
   }
   @media (max-width: ${theme.breakpoints.small}) {

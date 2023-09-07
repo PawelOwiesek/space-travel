@@ -26,8 +26,12 @@ export const Image = styled.img`
 
   @media (max-width: ${theme.breakpoints.medium}) {
     min-width: 100vw;
-    max-height: 10rem;
+    max-height: 12rem;
     margin: 0 0 6rem;
+  }
+
+  @media (max-width: ${theme.breakpoints.small}) {
+    max-height: 10rem;
   }
 `;
 
