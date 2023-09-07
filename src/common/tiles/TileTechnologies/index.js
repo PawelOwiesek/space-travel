@@ -1,11 +1,12 @@
-import { Image } from "./styled";
+import { Content, Description, Header, Image, SubTitle } from "./styled";
 
 export const Tile = ({ name, image, description, alt }) => {
   return (
-    <div>
-      {name}
+    <Content>
       <Image src={image} alt={alt} />
-      {description}
-    </div>
+      <SubTitle>The terminology ...</SubTitle>
+      <Header>{name}</Header>
+      <Description>{description}</Description>
+    </Content>
   );
 };
