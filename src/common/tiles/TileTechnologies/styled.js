@@ -3,8 +3,8 @@ import { theme } from "../../../theme";
 
 export const Image = styled.img`
   position: relative;
-  width: 30rem;
-  margin: 0 0 0 0;
+  width: 37rem;
+  margin: 10rem 0 0 30rem;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     min-width: 100vw;
@@ -55,6 +55,8 @@ export const Content = styled.div`
 
 export const SubTitle = styled.p`
   text-transform: uppercase;
+  width: 450px;
+  margin: -8rem 0 0 -15rem;
   font-family: ${theme.fonts.familyBarlowCondensed};
   letter-spacing: 0.18rem;
   color: hsl(${theme.colors.light});
@@ -66,6 +68,8 @@ export const SubTitle = styled.p`
     letter-spacing: 0.18rem;
     color: hsl(${theme.colors.light});
     font-size: ${theme.fontSize.heading3};
+    margin: 2rem 0 0 50%;
+    width: 100%;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
@@ -79,9 +83,10 @@ export const SubTitle = styled.p`
 `;
 
 export const Header = styled.h1`
+  margin: 0 -8rem;
   text-transform: uppercase;
   font-family: ${theme.fonts.familyBellefair};
-  font-size: ${theme.fontSize.heading4};
+  font-size: ${theme.fontSize.heading2};
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     text-transform: uppercase;
@@ -107,24 +112,23 @@ export const Header = styled.h1`
 `;
 
 export const Description = styled.p`
-  padding: 0.5rem 1.5rem;
   color: hsl(${theme.colors.light});
-  text-align: center;
+  text-align: left;
   font-size: ${theme.fontSize.medium};
   line-height: 1.5;
-  max-width: 30vw;
+  max-width: 35vw;
   position: absolute;
-  left: 20rem;
-  /* margin: 30px 0 0 20rem; */
+  left: 15rem;
+  top: 33rem;
+
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    position: relative;
     padding: 0.5rem 1.5rem;
     color: hsl(${theme.colors.light});
     text-align: center;
     font-size: ${theme.fontSize.heading3};
     line-height: 1.5;
     max-width: 100%;
-    left: 0;
+    position: static;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {

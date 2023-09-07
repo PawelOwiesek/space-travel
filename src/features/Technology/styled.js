@@ -107,7 +107,7 @@ export const SubTitle = styled.div`
   gap: ${theme.gap.gapNormal};
   letter-spacing: 0.16875rem;
   text-transform: uppercase;
-  margin: 8rem auto;
+  margin: 10rem 0 0 5rem;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     font-size: ${theme.fontSize.heading2};
