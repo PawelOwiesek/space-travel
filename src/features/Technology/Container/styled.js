@@ -9,7 +9,6 @@ export const StyledWrapper = styled.div`
   background-size: cover;
   background-position: center;
   max-width: 100vw;
-  height: 100vh;
 
   @media (max-width: 1024px) {
     background-image: url("https://i.postimg.cc/HkqPcSxP/background-technology-desktop.jpg");
