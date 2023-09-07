@@ -3,19 +3,19 @@ import { theme } from "../../../theme";
 
 export const Image = styled.img`
   position: relative;
-  max-width: 22rem;
-  margin: 0 10rem 0 0;
+  width: 30rem;
+  margin: 0 0 0 0;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     min-width: 100vw;
-    max-height: 34rem;
-    margin: 0 auto 3rem;
+    max-height: 40rem;
+    margin: 0 0 8rem;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
     min-width: 100vw;
     max-height: 23rem;
-    margin: 0.5rem auto;
+    margin: 0.5rem 0 5rem;
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
@@ -36,17 +36,15 @@ export const Image = styled.img`
 `;
 
 export const Content = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  @media (max-width: ${theme.breakpoints.ipadSmall}) {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
   }
 
@@ -56,6 +54,12 @@ export const Content = styled.div`
 `;
 
 export const SubTitle = styled.p`
+  text-transform: uppercase;
+  font-family: ${theme.fonts.familyBarlowCondensed};
+  letter-spacing: 0.18rem;
+  color: hsl(${theme.colors.light});
+  font-size: ${theme.fontSize.heading5};
+
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     text-transform: uppercase;
     font-family: ${theme.fonts.familyBarlowCondensed};
@@ -75,6 +79,10 @@ export const SubTitle = styled.p`
 `;
 
 export const Header = styled.h1`
+  text-transform: uppercase;
+  font-family: ${theme.fonts.familyBellefair};
+  font-size: ${theme.fontSize.heading4};
+
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     text-transform: uppercase;
     font-family: ${theme.fonts.familyBellefair};
@@ -99,12 +107,24 @@ export const Header = styled.h1`
 `;
 
 export const Description = styled.p`
+  padding: 0.5rem 1.5rem;
+  color: hsl(${theme.colors.light});
+  text-align: center;
+  font-size: ${theme.fontSize.medium};
+  line-height: 1.5;
+  max-width: 30vw;
+  position: absolute;
+  left: 20rem;
+  /* margin: 30px 0 0 20rem; */
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
+    position: relative;
     padding: 0.5rem 1.5rem;
     color: hsl(${theme.colors.light});
     text-align: center;
     font-size: ${theme.fontSize.heading3};
     line-height: 1.5;
+    max-width: 100%;
+    left: 0;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {

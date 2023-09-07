@@ -37,21 +37,24 @@ export const Item = styled.li`
 `;
 export const ButtonsWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: ${theme.gap.gapSmall};
   position: absolute;
-  top: 110px;
-  left: 42%;
+  top: 50vh;
+  left: 5rem;
   width: 100%;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
-    top: 500px;
+    position: relative;
+    flex-direction: row;
+    top: 46rem;
     left: auto;
   }
 
   @media (max-width: ${theme.breakpoints.ipadSmall}) {
-    margin: 0 70px;
-    top: 270px;
+    margin: 0 auto;
+    top: 28rem;
   }
 
   @media (max-width: ${theme.breakpoints.large}) {
@@ -60,11 +63,11 @@ export const ButtonsWrapper = styled.div`
   }
 
   @media (max-width: ${theme.breakpoints.medium}) {
-    top: 300px;
+    top: 17rem;
     margin: 0 auto;
   }
   @media (max-width: ${theme.breakpoints.small}) {
-    top: 270px;
+    top: 14rem;
   }
 `;
 
@@ -104,7 +107,7 @@ export const SubTitle = styled.div`
   gap: ${theme.gap.gapNormal};
   letter-spacing: 0.16875rem;
   text-transform: uppercase;
-  margin-bottom: 6rem;
+  margin: 8rem auto;
 
   @media (max-width: ${theme.breakpoints.ipadMedium}) {
     font-size: ${theme.fontSize.heading2};
